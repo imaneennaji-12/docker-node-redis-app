@@ -42,13 +42,29 @@ Application web de gestion des employés avec compteur de visites, déployée vi
 
 ## 🚀 Lancer le projet
 
-&gt; **Prérequis :** [Docker](https://www.docker.com/get-started) installé.  
-&gt; **Pas besoin d'installer Node.js ou Redis !**
+ **Prérequis :** [Docker](https://www.docker.com/get-started) installé.  
+ **Pas besoin d'installer Node.js ou Redis !**
 
-```bash
 # 1. Cloner le repo
 git clone https://github.com/VOTRE_USERNAME/docker-node-redis-app.git
 cd docker-node-redis-app
 
 # 2. Construire et lancer (UNE SEULE COMMANDE)
 docker-compose up --build
+Puis ouvrez : http://localhost:8080
+🛑 Arrêter
+# Arrêter les conteneurs (garde les données Redis)
+docker-compose down
+
+# Arrêter + supprimer les données Redis
+docker-compose down -v
+🐳 Commandes Docker utiles
+| Commande                                        | Action                     |
+| ----------------------------------------------- | -------------------------- |
+| `docker-compose up --build`                     | Construit et lance tout    |
+| `docker-compose up -d --build`                  | Lance en arrière-plan      |
+| `docker-compose down`                           | Arrête les conteneurs      |
+| `docker ps`                                     | Voir les conteneurs actifs |
+| `docker-compose logs`                           | Voir les logs              |
+| `docker exec -it redis-db redis-cli GET visits` | Voir le compteur Redis     |
+
