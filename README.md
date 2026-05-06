@@ -52,13 +52,14 @@ cd docker-node-redis-app
 # 2. Construire et lancer (UNE SEULE COMMANDE)
 docker-compose up --build
 Puis ouvrez : http://localhost:8080
-🛑 Arrêter
+
 # Arrêter les conteneurs (garde les données Redis)
 docker-compose down
 
 # Arrêter + supprimer les données Redis
 docker-compose down -v
-🐳 Commandes Docker utiles
+
+
 | Commande                                        | Action                     |
 | ----------------------------------------------- | -------------------------- |
 | `docker-compose up --build`                     | Construit et lance tout    |
